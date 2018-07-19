@@ -29,6 +29,8 @@ void MainWindow::acceptConnection()
         this->socket = this->server->nextPendingConnection();//nextPendingConnection获取已建立连接的套接字
         connect(socket,SIGNAL(readyRead()),this,SLOT(receiveData()));
 }
+
+
 void MainWindow::sendMessage()
 {
     QString str = ui->input_line_edit->text();
